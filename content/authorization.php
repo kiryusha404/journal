@@ -13,6 +13,7 @@
             $row = mysqli_fetch_array($input);
                 if(password_verify($_POST['pass'], $row['pass'])){
                    $_SESSION['role'] = $row['role']; 
+                   $_SESSION['id_us'] = $row['id_us'];
                    echo "<script>window.location.href='index.php'</script>";
 
 

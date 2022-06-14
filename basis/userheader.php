@@ -28,7 +28,7 @@
                         if($_SESSION['role']=="administrator"){
                             echo '<a href="#">Панель администратора</a>';}
                     ?>
-                    <a href="#">Личный кабинет</a>
+                    <a href="personal_account.php">Личный кабинет</a>
                     <a href="basis/exit.php">Выйти</a>
                     <a id="menu" href="#" class="icon">&#9776;</a>
                 </div>
