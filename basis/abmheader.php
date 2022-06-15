@@ -1,6 +1,8 @@
 <?php 
     session_start();
-    include_once('basis/unsession.php');
+    if($_SESSION['role']!="administrator"){
+        header('Location: schedule.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ru">

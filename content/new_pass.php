@@ -1,6 +1,6 @@
 <div class="nav_form">
 <h1>Сменить пароль</h1>
-    <form action="" method="POST" class="input">
+    <form action="#" method="POST" class="input">
         <div class="password">
 	        <input type="password" tabindex="1" id="password-input10" required placeholder="Введите старый пароль" name="pass1" class="info_input" >
 	        <a href="#" class="password-control" onclick="return show_hide_password(this, 'password-input10');"></a>
@@ -10,7 +10,7 @@
 	        <a href="#" class="password-control" onclick="return show_hide_password(this, 'password-input11');"></a>
         </div>
         <div class="password">
-	        <input type="password" tabindex="2" id="password-input12" required placeholder="Повторите пароль" name="pass" class="info_input" >
+	        <input type="password" tabindex="2" id="password-input12" required placeholder="Повторите пароль" name="pass3" class="info_input" >
 	        <a href="#" class="password-control" onclick="return show_hide_password(this, 'password-input12');"></a>
         </div>
         <?php 
@@ -41,4 +41,5 @@
         <button type="submit" class="info_input info_input_button">Изменить пароль</button>
     </form>
 </div>
+
 <script src="js/pass.js"></script>

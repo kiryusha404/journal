@@ -6,6 +6,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
     <title>Электронный журнал</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
@@ -15,7 +16,7 @@
 ?>
 <header>
     <div class="header">
-        <a href="<?php if(empty($_SESSION['role'])){echo "index.php";} else{echo"schedule.php";} ?>"><img src="img/logo.png" alt="logo" class="logo"></a>
+        <a href="index.php"><img src="img/logo.png" alt="logo" class="logo"></a>
     </div>
 </header>
 <div class="main">

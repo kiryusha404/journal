@@ -19,3 +19,8 @@
 .good{
     color:green;
 }
+.black{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin-bottom: 7px; 
+}
