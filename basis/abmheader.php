@@ -25,7 +25,7 @@
                     <a href="index.php">Расписание кабинетов</a>
                     <?php 
                     if($_SESSION['role']!="moderator"){
-                        echo '<a href="#">Взять кабинет</a>';}
+                        echo '<a href="office.php">Взять кабинет</a>';}
                     if($_SESSION['role']=="moderator"){
                         echo '<a href="#">Панель модератора</a>';}else
                         if($_SESSION['role']=="administrator"){

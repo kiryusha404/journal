@@ -1,6 +1,8 @@
 <?php 
     session_start();
-    include_once('basis/unsession.php');
+    if($_SESSION['role']=="moderator" && $_SESSION['role']){
+        header('Location: schedule.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ru">

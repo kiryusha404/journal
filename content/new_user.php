@@ -71,7 +71,8 @@
         <button type="submit" class="info_input info_input_button">Добавить</button>
     </form>
 </div>
-<a class="new_pass" href="#"><div class="pass_bl nav_form"><p>Удалить пользователя</p></div></a>
+<a class="new_pass" href="del_user.php"><div class="pass_bl nav_form"><p>Удалить пользователя</p></div></a>
 <a class="new_pass" href="#"><div class="pass_bl nav_form"><p>Одобрить кабинет</p></div></a>
+<a class="new_pass" href="role.php"><div class="pass_bl nav_form"><p>Изменить роль пользователя</p></div></a>
 <script src="js/pass.js"></script>
 
