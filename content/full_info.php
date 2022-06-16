@@ -18,9 +18,9 @@
 </div>
 <?php
 if($_POST['aud']==0){
-    $push='SELECT u.name1, u.name2, u.name3, u.login, a.number, l.day, l.time1, l.time2 FROM list_au l JOIN user u ON l.id_us_fk = u.id_us JOIN auditorium a ON a.id_a = l.id_a_fk WHERE l.status = "Подтверждено"';
+    $push='SELECT u.name1, u.name2, u.name3, u.login, a.number, l.day, l.time1, l.time2 FROM list_au l JOIN user u ON l.id_us_fk = u.id_us JOIN auditorium a ON a.id_a = l.id_a_fk WHERE l.status = "Подтверждено" OR l.status = "Завершено"';
 }else{
-    $push='SELECT u.name1, u.name2, u.name3, u.login, a.number, l.day, l.time1, l.time2 FROM list_au l JOIN user u ON l.id_us_fk = u.id_us JOIN auditorium a ON a.id_a = l.id_a_fk WHERE l.status = "Подтверждено" AND l.id_a_fk = '.$_POST['aud'].'';
+    $push='SELECT u.name1, u.name2, u.name3, u.login, a.number, l.day, l.time1, l.time2 FROM list_au l JOIN user u ON l.id_us_fk = u.id_us JOIN auditorium a ON a.id_a = l.id_a_fk WHERE l.status != "Отклонено" AND l.status != "Ожидание" AND l.id_a_fk = '.$_POST['aud'].' ';
 }
 $res = mysqli_query($journal, $push); 
 ?>
