@@ -10,3 +10,4 @@
     <p>Телефон: <?php echo $row['phone'];?></p>
 </div>
 <a class="new_pass" href="pass.php"><div class="pass_bl nav_form"><p>Изменить пароль</p></div></a>
+<a class="new_pass" href="new_number.php"><div class="pass_bl nav_form"><p>Изменить телефон</p></div></a>

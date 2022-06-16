@@ -8,12 +8,13 @@
         </div>
         <?php 
         if(!empty($_POST['login']) && !empty($_POST['pass'])){
-            $push = 'SELECT u.id_us, u.pass, r.role FROM user u join role r ON u.role_fk = r.id_role  WHERE login="'.$_POST["login"].'"';
+            $push = 'SELECT u.id_us, u.pass, r.role, priority_fk FROM user u join role r ON u.role_fk = r.id_role  WHERE login="'.$_POST["login"].'"';
             $input = mysqli_query($journal, $push);
             $row = mysqli_fetch_array($input);
                 if(password_verify($_POST['pass'], $row['pass'])){
                    $_SESSION['role'] = $row['role']; 
                    $_SESSION['id_us'] = $row['id_us'];
+                   $_SESSION['pri'] = $row['priority_fk'];
                    echo "<script>window.location.href='index.php'</script>";
 
 

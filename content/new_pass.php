@@ -41,5 +41,5 @@
         <button type="submit" class="info_input info_input_button">Изменить пароль</button>
     </form>
 </div>
-
+<a class="new_pass" href="personal_account.php"><div class="pass_bl nav_form"><p>Личный кабинет</p></div></a>
 <script src="js/pass.js"></script>
