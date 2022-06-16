@@ -25,7 +25,7 @@
                     if($_SESSION['role']!="moderator"){
                         echo '<a href="office.php">Взять кабинет</a>';}
                     if($_SESSION['role']=="moderator"){
-                        echo '<a href="#">Панель модератора</a>';}else
+                        echo '<a href="moder_panel.php">Панель модератора</a>';}else
                         if($_SESSION['role']=="administrator"){
                             echo '<a href="admin.php">Панель администратора</a>';}
                     ?>
