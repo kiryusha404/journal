@@ -39,3 +39,5 @@
 </div>
 
 <a class="new_pass" href="moder_panel.php"><div class="pass_bl nav_form"><p>Подтвердить аудитории</p></div></a>
+<a class="new_pass" href="mphone.php"><div class="pass_bl nav_form"><p>Узнать номер телефона у пользователя</p></div></a>
+
