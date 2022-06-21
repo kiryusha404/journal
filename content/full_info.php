@@ -4,7 +4,7 @@
     <select class="info_input" placeholder="Пользователь" name="aud" >
         <option value="0" >Все</option>
         <?php
-            $push = 'SELECT * FROM `auditorium`';
+            $push = 'SELECT * FROM `auditorium` ORDER BY `auditorium`.`number` ASC';
             $acc = mysqli_query($journal, $push); 
             while($row = mysqli_fetch_array($acc)){
         ?>
@@ -18,9 +18,9 @@
 </div>
 <?php
 if($_POST['aud']==0){
-    $push='SELECT u.name1, u.name2, u.name3, u.login, a.number, l.day, l.time1, l.time2 FROM list_au l JOIN user u ON l.id_us_fk = u.id_us JOIN auditorium a ON a.id_a = l.id_a_fk WHERE l.status = "Подтверждено" OR l.status = "Завершено"';
+    $push='SELECT u.name1, u.name2, u.name3, u.login, a.number, l.day, l.time1, l.time2 FROM list_au l JOIN user u ON l.id_us_fk = u.id_us JOIN auditorium a ON a.id_a = l.id_a_fk WHERE l.status = "Подтверждено" OR l.status = "Завершено" ORDER BY l.`id_list` DESC';
 }else{
-    $push='SELECT u.name1, u.name2, u.name3, u.login, a.number, l.day, l.time1, l.time2 FROM list_au l JOIN user u ON l.id_us_fk = u.id_us JOIN auditorium a ON a.id_a = l.id_a_fk WHERE l.status != "Отклонено" AND l.status != "Ожидание" AND l.id_a_fk = '.$_POST['aud'].' ';
+    $push='SELECT u.name1, u.name2, u.name3, u.login, a.number, l.day, l.time1, l.time2 FROM list_au l JOIN user u ON l.id_us_fk = u.id_us JOIN auditorium a ON a.id_a = l.id_a_fk WHERE l.status != "Отклонено" AND l.status != "Ожидание" AND l.id_a_fk = '.$_POST['aud'].' ORDER BY l.`id_list` DESC';
 }
 $res = mysqli_query($journal, $push); 
 ?>

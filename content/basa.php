@@ -14,7 +14,7 @@
         </select>
         <select class="info_input" placeholder="Пользователь" name="aud" >
         <?php
-            $push = 'SELECT * FROM `auditorium`';
+            $push = 'SELECT * FROM `auditorium` ORDER BY `auditorium`.`number` ASC';
             $acr = mysqli_query($journal, $push); 
             while($row = mysqli_fetch_array($acr)){
         ?>
